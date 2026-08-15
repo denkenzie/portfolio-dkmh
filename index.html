@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Informasi Kependudukan RT/RW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ===== HEADER UDAH RAPIH & SEJAJAR ===== -->
+    <header class="masthead">
+      <div class="masthead-title">
+        <div class="stempel">RT·RW<br>DESA</div>
+        <div>
+          <h1>Sistem Informasi Kependudukan RT/RW</h1>
+          <div class="sub">⚡ Digitalisasi Administrasi Lingkungan <span>RESMI</span></div>
+        </div>
+      </div>
+      <div class="masthead-meta">
+        <strong id="todayDate">Sabtu, 15 Agustus 2026</strong>
+        <span>Data tersimpan bersama · terlihat oleh semua pengurus</span>
+      </div>
+    </header>
+
+    <!-- ===== TABS ===== -->
+    <nav class="tabs" id="tabNav">
+      <button data-tab="dashboard" class="active">🏠 Beranda</button>
+      <button data-tab="warga">👥 Data Warga</button>
+      <button data-tab="surat">✉️ Surat-Menyurat <span class="badge-count" id="badgeSurat" style="display:none"></span></button>
+      <button data-tab="keuangan">💰 Keuangan</button>
+      <button data-tab="pengumuman">📣 Pengumuman &amp; Kegiatan</button>
+      <button data-tab="tamu">🪪 Buku Tamu</button>
+    </nav>
+
+    <!-- ===== SHEET ===== -->
+    <main class="sheet" id="sheetContent">
+      <div class="loading-note">Memuat data…</div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-note">
+      <span>Arsip Warga — dikelola oleh pengurus RT/RW setempat.</span>
+      <span>Data disimpan bersama dan hanya dapat diubah oleh pengurus yang membuka sistem ini.</span>
+    </footer>
+
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox"></div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
